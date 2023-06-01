@@ -1,0 +1,34 @@
+
+state --> single Primitive
+const[num,setnum]=usestate(0);
+
+interface Iperson{
+    id,
+    name,
+    salary
+}
+
+const[person,setPerson]=useState({});
+
+setPerson() // we need only to set only name do not set id and salary.
+
+So to solve this issue there is new framwork called react hook form.
+In react hook form create the state for Iperson.
+
+advantage-1
+
+const{setter,getter,register,reset} useForm<Iperson>({})
+
+setter("name",value)
+
+advantage 2  ----> provide rgister mathod
+
+<input onchange={(e)=>setname(e.target.value)}>
+
+<input {...register("name")} />
+
+advantage 3--> validation
+
+<input {...register("name",{minLength:4,message "lenght should be 4 or more"})} />
+
+advantage 4---> reset

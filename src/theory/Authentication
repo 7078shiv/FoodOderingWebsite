@@ -1,0 +1,15 @@
+
+
+some authentication loke
+ cognito
+ azure authentication
+ firebase
+sending config ------> firebase (one time) singleton object
+ username --------> firebase
+ password  <--------- 
+             200/400
+             ok/error
+
+200 ok ---> homepage
+
+400 error ---> error message in signup 

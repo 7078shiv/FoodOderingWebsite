@@ -1,0 +1,107 @@
+say that user is login into amazon .in
+user login ----> login
+user go to ---> cart
+
+
+user added some items into the cart in another computer 
+and  login in another computer.
+
+
+so it will shown that items added into cart
+in previous computer in current
+computer.
+
+So how would it shown?
+
+So when user added items into previous computer so when 
+he adds the items 
+UI will send items and the cookie of the user to the server.
+
+And this items gets stores to the server.
+
+Now  , in the current computer when we open the cart page  then we send the user cookie to the server and the server will reply back the itms that we added into the cart.
+
+
+ By cookie it is able to identify the user. 
+
+ Imp --> Most imp is cookie so how we get the cookie?
+
+Cookies obtains from user using some authentication framwork(like cognito ,Azure,firebase authentication framwork) we give the username and password to authentication framwork it give us back the cookie.
+
+Now it the the duety of the UI to save the cookie in the frontend And the best place to save the cookie is---> Context.
+
+In Context what happen is When you create a context you give the value to it which is cookie
+
+<Context value={cookie}>
+<component1>
+<component2>
+<Component3>
+<Context>
+
+this cookie will be assible to all the three components
+
+When you will be creating the website called amazone so all the pages of amazon will bw able to access the cookie.
+
+<context value={cookie}>
+<login>
+<cart>
+<address>
+<payment>
+<order>
+</Context>
+
+
+
+Problem of Context
+1) All the children get access to that data if even that they dont want
+
+2) Not best for faster development
+
+This problem is resolved by using reducer.
+
+Reducer-->
+
+It is db for frontend
+
+How do you add data to our database
+
+db
+table1,table2 ,table3
+1) Create a table
+2) create coloums
+3) insert into table values for coloums
+
+select from table
+
+same approach follows in reducer also
+
+cretion the database
+
+db will contains all the reducers of the app
+reducer1,reducer2,reducer3 ...
+
+creating coloums for the reducer -- setter methods for the data these setter method are called as action.
+
+Also want to insert the data into the reducer so we use 
+UseDispatch(action(data))
+
+
+read the data ----> UseSelector(tablename,coloumnname);
+
+
+create --- define schema + action(setter method)
+db ---> root reducer -- its a group of reducer
+insert -- useDispatch(action(data))
+read -- useSelector(reducername.attributeName);
+
+we will create a simple application 
+ 
+textbox --> name
+we will write this name to reducer by listning to onchange 
+event.
+
+then we will read this name from reducer
+
+
+
+
